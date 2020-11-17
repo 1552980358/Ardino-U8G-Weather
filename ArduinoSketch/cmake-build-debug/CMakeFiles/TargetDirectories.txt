@@ -1,0 +1,9 @@
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/ArduinoSketch-upload.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/uno_CORE.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/uno_U8glib.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/uno_u8g.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/ArduinoSketch-size.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/ArduinoSketch.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/upload.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/CMakeFiles/rebuild_cache.dir

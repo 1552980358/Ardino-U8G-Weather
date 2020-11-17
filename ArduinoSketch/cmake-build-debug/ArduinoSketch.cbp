@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ArduinoSketch"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Platform\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ArduinoSketch-upload">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ArduinoSketch-upload"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_CORE">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_CORE.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_CORE"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_CORE/fast">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_CORE.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_CORE/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_U8glib">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_U8glib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_U8glib"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_U8glib/fast">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_U8glib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_U8glib/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_u8g">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_u8g.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_u8g"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uno_u8g/fast">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/libuno_u8g.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 uno_u8g/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ArduinoSketch-size">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ArduinoSketch-size"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ArduinoSketch">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/ArduinoSketch.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ArduinoSketch"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ArduinoSketch/fast">
+				<Option output="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/ArduinoSketch.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/src"/>
+					<Add directory="C:/Arduino/arduino-1.8.13/libraries/U8glib/u8g/utility"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/include-fixed"/>
+					<Add directory="c:\arduino\arduino-1.8.13\hardware\tools\avr\bin\../lib/gcc/avr/7.3.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ArduinoSketch/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="upload">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 upload"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Arduino.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/CDC.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Client.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial1.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial2.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial3.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/HardwareSerial_private.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/IPAddress.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/IPAddress.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/PluggableUSB.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/PluggableUSB.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Print.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Print.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Printable.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Server.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Stream.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Stream.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Tone.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/USBAPI.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/USBCore.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/USBCore.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/USBDesc.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/Udp.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/WCharacter.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/WInterrupts.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/WMath.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/WString.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/WString.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/abi.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/binary.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/hooks.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/main.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/new.cpp">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/new.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring_analog.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring_digital.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring_private.h">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring_pulse.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/hardware/arduino/avr/cores/arduino/wiring_shift.c">
+			<Option target="uno_CORE"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/U8glib.cpp">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/U8glib.h">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/chessengine.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g.h">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_bitmap.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_circle.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_clip.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_api.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_api_16gr.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_attiny85_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_common.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_fast_parallel.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_hw_usart_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_no_en_parallel.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_parallel.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_port_d_wr.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_ssd_i2c.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_st7920_custom.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_st7920_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_st7920_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_std_sw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_sw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_t6963.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_arduino_uc_i2c.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_atmega_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_atmega_parallel.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_atmega_st7920_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_atmega_st7920_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_atmega_sw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_i2c.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_io.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_msp430_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_null.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_raspberrypi_hw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_raspberrypi_ssd_i2c.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_com_std_sw_spi.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_cursor.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_delay.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_a2_micro_printer.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_flipdisc_2x7.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_gprof.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ht1632.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ili9325d_320x240.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ks0108_128x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_lc7981_160x80.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_lc7981_240x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_lc7981_240x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_lc7981_320x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ld7032_60x32.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_null.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_pcd8544_84x48.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_pcf8812_96x65.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_sbn1661_122x32.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1306_128x32.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1306_128x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1306_64x48.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1309_128x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1322_nhd31oled_bw.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1322_nhd31oled_gr.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1325_nhd27oled_bw.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1325_nhd27oled_bw_new.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1325_nhd27oled_gr.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1325_nhd27oled_gr_new.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1327_96x96_gr.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1351_128x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_ssd1353_160x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_64128n.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_dogm128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_dogm132.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_lm6059.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_lm6063.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_nhd_c12832.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7565_nhd_c12864.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7687_c144mvgd.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7920_128x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7920_192x32.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_st7920_202x32.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_t6963_128x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_t6963_128x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_t6963_240x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_t6963_240x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_tls8204_84x48.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1601_c128032.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1608_240x128.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1608_240x64.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1610_dogxl160.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1611_dogm240.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1611_dogxl240.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1701_dogs102.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_dev_uc1701_mini12864.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_ellipse.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_font.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_font_data.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_line.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_ll_api.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_page.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb14v1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb16h1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb16h2.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb16v1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb16v2.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb32h1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8h1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8h1f.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8h2.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8h8.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8v1.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pb8v2.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pbxh16.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_pbxh24.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_polygon.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_rect.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_rot.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_scale.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_state.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_u16toa.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_u8toa.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="C:/Arduino/arduino-1.8.13/libraries/U8glib/utility/u8g_virtual_screen.c">
+			<Option target="uno_U8glib"/>
+			<Option target="uno_u8g"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/arduino_sketch.ino">
+			<Option target="ArduinoSketch"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/ArduinoSketch_arduino_sketch.ino.cpp">
+			<Option target="ArduinoSketch"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/cmake-build-debug/ArduinoSketch_arduino_sketch.ino.cpp.rule">
+			<Option target="ArduinoSketch"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/cmake/ArduinoToolchain.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Ardino-U8G-Weather/ArduinoSketch/cmake/Platform/Arduino.cmake">
+			<Option virtualFolder="CMake Files\cmake\Platform\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

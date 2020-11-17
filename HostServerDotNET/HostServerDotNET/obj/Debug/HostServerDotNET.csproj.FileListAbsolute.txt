@@ -1,0 +1,6 @@
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\bin\Debug\HostServerDotNET.exe
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\bin\Debug\HostServerDotNET.pdb
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\obj\Debug\HostServerDotNET.csprojAssemblyReference.cache
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\obj\Debug\HostServerDotNET.csproj.CoreCompileInputs.cache
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\obj\Debug\HostServerDotNET.exe
+D:\Ardino-U8G-Weather\HostServerDotNET\HostServerDotNET\obj\Debug\HostServerDotNET.pdb

@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+3f9ef62eeba60181cba9db41724dd999 ArduinoSketch_arduino_sketch.ino.cpp
+86951193b1fe4e0212020d5cf2feb57a CMakeFiles/ArduinoSketch-size
+75466b7197e8ef3f2bbaa9f58649fe34 CMakeFiles/ArduinoSketch-upload
