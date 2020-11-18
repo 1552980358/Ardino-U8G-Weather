@@ -30,8 +30,9 @@ namespace HostServerDotNET
                         WebRequest.Create(
                             "http://api.openweathermap.org/data/2.5/weather?q=Mongkok,hk&units=metric&APPID=" + ApiKey);
                 }
-                catch
+                catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     webRequest = null;
                 }
 
@@ -44,8 +45,9 @@ namespace HostServerDotNET
                 {
                     stream = webRequest.GetResponse().GetResponseStream();
                 }
-                catch
+                catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     stream = null;
                 }
 
@@ -117,7 +119,7 @@ namespace HostServerDotNET
                     humidity + ';' +
                     time
                 );
-                
+
                 Console.WriteLine(
                     "temp: " + temp + '\n' +
                     "temp_min: " + tempMin + '\n' +
@@ -127,18 +129,19 @@ namespace HostServerDotNET
                     "time: " + time + '\n' +
                     "===================="
                 );
-                
+
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
-                
+
                 serialPort.Close();
-                
+
                 Thread.Sleep(500);
             }
+
             // ReSharper disable once FunctionNeverReturns
         }
 
@@ -150,9 +153,9 @@ namespace HostServerDotNET
                 var streamReader = new StreamReader(stream);
                 streamContent = streamReader.ReadToEnd();
             }
-            catch
+            catch (Exception e)
             {
-                // ignored
+                Console.WriteLine(e);
             }
 
             return streamContent;
