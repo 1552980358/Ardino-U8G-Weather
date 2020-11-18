@@ -166,6 +166,7 @@ namespace HostServerDotNET
 
                 try
                 {
+                    serialPort.ReadTimeout = 500;
                     if (serialPort.ReadLine() == "RECEIVED")
                     {
                         Console.WriteLine("Completed");
