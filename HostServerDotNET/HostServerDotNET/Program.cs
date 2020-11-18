@@ -17,7 +17,7 @@ namespace HostServerDotNET
             // ReSharper disable once TooWideLocalVariableScope
             Stream stream;
             // ReSharper disable once TooWideLocalVariableScope
-            string jsonMsg;
+            string msg;
             // ReSharper disable once TooWideLocalVariableScope
             SerialPort serialPort = null;
 
@@ -52,58 +52,13 @@ namespace HostServerDotNET
                     continue;
                 }
 
-                jsonMsg = ReadStream(stream);
-                if (jsonMsg == "")
+                msg = ReadStream(stream);
+                if (msg == "")
                 {
                     continue;
                 }
 
-                string tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp\":", StringComparison.Ordinal) + 7);
-                var temp = tmp.Substring(0, tmp.IndexOf(','));
-
-                if (temp.Length > 2)
-                {
-                    temp = temp[3] >= '5'
-                        ? (
-                            temp[1] == '9'
-                                ? (temp[0] + 1).ToString() + '0'
-                                : temp[0].ToString() + (char) (temp[1] + 1)
-                        )
-                        : temp.Substring(0, 2);
-                }
-
-                tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_min\"", StringComparison.Ordinal) + 11);
-                var tempMin = tmp.Substring(0, tmp.IndexOf(','));
-                if (tempMin.Length > 2)
-                {
-                    tempMin = tempMin[3] >= '5'
-                        ? (
-                            tempMin[1] == '9'
-                                ? (tempMin[0] + 1).ToString() + '0'
-                                : tempMin[0].ToString() + (char) (temp[1] + 1)
-                        )
-                        : tempMin.Substring(0, 2);
-                }
-
-                tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_max\"", StringComparison.Ordinal) + 11);
-                var tempMax = tmp.Substring(0, tmp.IndexOf(','));
-                if (tempMax.Length > 2)
-                {
-                    tempMax = tempMax[3] >= '5'
-                        ? (
-                            tempMax[1] == '9'
-                                ? (tempMax[0] + 1).ToString() + '0'
-                                : tempMax[0].ToString() + (char) (temp[1] + 1)
-                        )
-                        : tempMax.Substring(0, 2);
-                }
-
-                tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"pressure\"", StringComparison.Ordinal) + 11);
-                var pressure = tmp.Substring(0, tmp.IndexOf(','));
-
-                tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"humidity\"", StringComparison.Ordinal) + 11);
-                var humidity = tmp.Substring(0, tmp.IndexOf('}'));
-                var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                msg = ReadData(msg);
 
                 if (serialPort == null || !serialPort.IsOpen)
                 {
@@ -136,14 +91,7 @@ namespace HostServerDotNET
                 try
                 {
                     Console.WriteLine("Writing to board");
-                    serialPort.Write(
-                        temp + ';' +
-                        tempMin + ';' +
-                        tempMax + ';' +
-                        pressure + ';' +
-                        humidity + ';' +
-                        time
-                    );
+                    serialPort.Write(msg);
                 }
                 catch (Exception e)
                 {
@@ -166,21 +114,23 @@ namespace HostServerDotNET
 
                 try
                 {
-                    serialPort.ReadTimeout = 500;
+                    serialPort.ReadTimeout = 1000;
                     if (serialPort.ReadLine() == "RECEIVED")
                     {
                         Console.WriteLine("Completed");
                         Console.WriteLine("====================");
                     }
-                    else
-                    {
-                        Console.WriteLine("No response received");
-                        Console.WriteLine("====================");
-                    }
                 }
-                catch
+                catch (TimeoutException)
                 {
-                    // 
+                    Console.WriteLine("No response received");
+                    Console.WriteLine("====================");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error found:");
+                    Console.WriteLine(e);
+                    Console.WriteLine("====================");
                 }
 
                 // Console.WriteLine(serialPort.ReadLine());
@@ -190,7 +140,7 @@ namespace HostServerDotNET
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
 
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
             }
 
             // ReSharper disable once FunctionNeverReturns
@@ -212,6 +162,57 @@ namespace HostServerDotNET
             }
 
             return streamContent;
+        }
+
+        static string ReadData(string jsonMsg)
+        {
+            string tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp\":", StringComparison.Ordinal) + 7);
+            var temp = tmp.Substring(0, tmp.IndexOf(','));
+
+            if (temp.Length > 2)
+            {
+                temp = temp[3] >= '5'
+                    ? (
+                        temp[1] == '9'
+                            ? (temp[0] + 1).ToString() + '0'
+                            : temp[0].ToString() + (char) (temp[1] + 1)
+                    )
+                    : temp.Substring(0, 2);
+            }
+
+            tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_min\"", StringComparison.Ordinal) + 11);
+            var tempMin = tmp.Substring(0, tmp.IndexOf(','));
+            if (tempMin.Length > 2)
+            {
+                tempMin = tempMin[3] >= '5'
+                    ? (
+                        tempMin[1] == '9'
+                            ? (tempMin[0] + 1).ToString() + '0'
+                            : tempMin[0].ToString() + (char) (temp[1] + 1)
+                    )
+                    : tempMin.Substring(0, 2);
+            }
+
+            tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_max\"", StringComparison.Ordinal) + 11);
+            var tempMax = tmp.Substring(0, tmp.IndexOf(','));
+            if (tempMax.Length > 2)
+            {
+                tempMax = tempMax[3] >= '5'
+                    ? (
+                        tempMax[1] == '9'
+                            ? (tempMax[0] + 1).ToString() + '0'
+                            : tempMax[0].ToString() + (char) (temp[1] + 1)
+                    )
+                    : tempMax.Substring(0, 2);
+            }
+
+            tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"pressure\"", StringComparison.Ordinal) + 11);
+            var pressure = tmp.Substring(0, tmp.IndexOf(','));
+
+            tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"humidity\"", StringComparison.Ordinal) + 11);
+            var humidity = tmp.Substring(0, tmp.IndexOf('}'));
+            var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+            return temp + ';' + tempMin + ';' + tempMax + ';' + pressure + ';' + humidity + ';' + time;
         }
     }
 }
