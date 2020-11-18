@@ -127,8 +127,17 @@ namespace HostServerDotNET
                     "time: " + time + '\n' +
                     "===================="
                 );
-                Thread.Sleep(1000);
+                
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                
                 serialPort.Close();
+                
+                Thread.Sleep(500);
             }
             // ReSharper disable once FunctionNeverReturns
         }
