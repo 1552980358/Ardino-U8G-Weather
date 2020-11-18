@@ -146,7 +146,7 @@ namespace HostServerDotNET
             // ReSharper disable once FunctionNeverReturns
         }
 
-        static string ReadStream(Stream stream)
+        private static string ReadStream(Stream stream)
         {
             var streamContent = "";
             try
@@ -164,7 +164,7 @@ namespace HostServerDotNET
             return streamContent;
         }
 
-        static string ReadData(string jsonMsg)
+        private static string ReadData(string jsonMsg)
         {
             string tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp\":", StringComparison.Ordinal) + 7);
             var temp = tmp.Substring(0, tmp.IndexOf(','));
