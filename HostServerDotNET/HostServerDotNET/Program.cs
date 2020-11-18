@@ -8,7 +8,7 @@ namespace HostServerDotNET
 {
     internal static class Program
     {
-        private const string ApiKey = "";
+        private const string ApiKey = "de815d60d8077177e2f482ab4f5b4a7a";
 
         public static void Main()
         {
@@ -109,16 +109,60 @@ namespace HostServerDotNET
                 var humidity = tmp.Substring(0, tmp.IndexOf('}'));
                 var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
-                serialPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
-                serialPort.Open();
-                serialPort.Write(
-                    temp + ';' +
-                    tempMin + ';' +
-                    tempMax + ';' +
-                    pressure + ';' +
-                    humidity + ';' +
-                    time
-                );
+                try
+                {
+                    serialPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    continue;
+                }
+
+                try
+                {
+                    serialPort.Open();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    try
+                    {
+                        serialPort.Close();
+                    }
+                    catch
+                    {
+                        // ignored
+                    }
+
+                    continue;
+                }
+
+                try
+                {
+                    serialPort.Write(
+                        temp + ';' +
+                        tempMin + ';' +
+                        tempMax + ';' +
+                        pressure + ';' +
+                        humidity + ';' +
+                        time
+                    );
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    try
+                    {
+                        serialPort.Close();
+                    }
+                    catch
+                    {
+                        // ignored
+                    }
+
+                    continue;
+                }
 
                 Console.WriteLine(
                     "temp: " + temp + '\n' +
@@ -137,7 +181,14 @@ namespace HostServerDotNET
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
 
-                serialPort.Close();
+                try
+                {
+                    serialPort.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
 
                 Thread.Sleep(500);
             }
