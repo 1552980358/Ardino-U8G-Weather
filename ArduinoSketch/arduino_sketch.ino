@@ -66,21 +66,42 @@ void read_serial() {
     }
 
     auto msg = Serial.readString();
+
+    /**
+     * Format:
+     * 26;26;26;1004;75;2020-11-18 11:29
+     *
+     * Divided by ';'
+     * Date and time will be fetched with hard-coded 16 letters
+     **/
+
     temp = msg.substring(0, msg.indexOf(';'));
-    msg.replace(temp + ';', "");
+    // msg.replace(temp + ';', "");
+    msg = msg.substring(msg.indexOf(';') + 1);
+    Serial.println(msg);
 
     temp_min = msg.substring(0, msg.indexOf(';'));
-    msg.replace(temp_min + ';', "");
+    // msg.replace(temp_min + ';', "");
+    msg = msg.substring(msg.indexOf(';') + 1);
+    // Serial.println(msg);
 
     temp_max = msg.substring(0, msg.indexOf(';'));
-    msg.replace(temp_max + ';', "");
+    // msg.replace(temp_max + ';', "");
+    msg = msg.substring(msg.indexOf(';') + 1);
+    // Serial.println(msg);
 
     pressure = msg.substring(0, msg.indexOf(';'));
-    msg.replace(pressure + ';', "");
+    // msg.replace(pressure + ';', "");
+    msg = msg.substring(msg.indexOf(';') + 1);
+    // Serial.println(msg);
 
     humidity = msg.substring(0, msg.indexOf(';'));
-    msg.replace(humidity + ';', "");
+    // msg.replace(humidity + ';', "");
+    msg = msg.substring(msg.indexOf(';') + 1);
+    // Serial.println(msg);
 
+    // Date is fixed, in yyyy-MM-dd HH:mm
+    // which is 16 letters
     time = msg.substring(0, 16);
 }
 
@@ -107,7 +128,6 @@ void draw_weather() {
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
         height += u8g.getFontAscent() * 1.5;
-
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(time.c_str())) / 2, height, time.c_str());
 
         height = 0;
