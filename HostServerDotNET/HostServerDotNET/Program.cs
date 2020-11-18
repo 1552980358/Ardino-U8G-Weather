@@ -140,7 +140,7 @@ namespace HostServerDotNET
                 // Console.WriteLine(serialPort.ReadLine());
                 // Console.WriteLine(serialPort.ReadLine());
 
-                Thread.Sleep(1000);
+                Thread.Sleep(200);
             }
 
             // ReSharper disable once FunctionNeverReturns

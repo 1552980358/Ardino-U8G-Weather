@@ -3,7 +3,7 @@
 
 U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE | U8G_I2C_OPT_DEV_0);
 
-void read_serial();
+int read_serial();
 
 void draw_launch();
 
@@ -40,9 +40,7 @@ String humidity = "";
 String time = "";
 
 void loop(void) {
-    read_serial();
-    if (temp == "" || temp_min == "" || temp_max == "" || pressure == "" || humidity == "" || time == "") {
-        draw_launch();
+    if (!read_serial()) {
         return;
     }
 
@@ -60,9 +58,9 @@ void draw_launch() {
     delay(2000);
 }
 
-void read_serial() {
+int read_serial() {
     if (!Serial.available()) {
-        return;
+        return 0;
     }
 
     auto msg = Serial.readString();
@@ -105,6 +103,7 @@ void read_serial() {
     // Date is fixed, in yyyy-MM-dd HH:mm
     // which is 16 letters
     time = msg.substring(0, 16);
+    return 1;
 }
 
 void draw_weather() {
@@ -134,5 +133,5 @@ void draw_weather() {
 
         height = 0;
     } while (u8g.nextPage());
-    delay(500);
+    delay(100);
 }
