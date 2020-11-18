@@ -67,6 +67,8 @@ void read_serial() {
 
     auto msg = Serial.readString();
 
+    Serial.write("RECEIVED\n");
+
     /**
      * Format:
      * 26;26;26;1004;75;2020-11-18 11:29
@@ -78,7 +80,7 @@ void read_serial() {
     temp = msg.substring(0, msg.indexOf(';'));
     // msg.replace(temp + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
-    Serial.println(msg);
+    // Serial.println(msg);
 
     temp_min = msg.substring(0, msg.indexOf(';'));
     // msg.replace(temp_min + ';', "");
@@ -132,5 +134,5 @@ void draw_weather() {
 
         height = 0;
     } while (u8g.nextPage());
-    delay(1000);
+    delay(500);
 }

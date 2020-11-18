@@ -19,10 +19,11 @@ namespace HostServerDotNET
             // ReSharper disable once TooWideLocalVariableScope
             string jsonMsg;
             // ReSharper disable once TooWideLocalVariableScope
-            SerialPort serialPort;
+            SerialPort serialPort = null;
 
             while (true)
             {
+                Console.WriteLine("Connecting to \"https://openweathermap.org/\"");
                 try
                 {
                     // 连接到 https://openweathermap.org/ 的API
@@ -32,27 +33,22 @@ namespace HostServerDotNET
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine("Connection failed: ");
                     Console.WriteLine(e);
-                    webRequest = null;
-                }
-
-                if (webRequest == null)
-                {
+                    Console.WriteLine("====================");
                     continue;
                 }
 
+                Console.WriteLine("Reading data from API");
                 try
                 {
                     stream = webRequest.GetResponse().GetResponseStream();
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine("Reading failed: ");
                     Console.WriteLine(e);
-                    stream = null;
-                }
-
-                if (stream == null)
-                {
+                    Console.WriteLine("====================");
                     continue;
                 }
 
@@ -109,37 +105,37 @@ namespace HostServerDotNET
                 var humidity = tmp.Substring(0, tmp.IndexOf('}'));
                 var time = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
 
-                try
+                if (serialPort == null || !serialPort.IsOpen)
                 {
-                    serialPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    continue;
-                }
-
-                try
-                {
-                    serialPort.Open();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
                     try
                     {
-                        serialPort.Close();
+                        Console.WriteLine("Connecting to board");
+                        serialPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+                        serialPort.Open();
                     }
-                    catch
+                    catch (Exception e)
                     {
-                        // ignored
-                    }
+                        Console.WriteLine("Connection failed:");
+                        Console.WriteLine(e);
+                        Console.WriteLine("====================");
+                        Console.WriteLine();
+                        try
+                        {
+                            serialPort.Close();
+                        }
+                        catch
+                        {
+                            //
+                        }
 
-                    continue;
+                        serialPort = null;
+                        continue;
+                    }
                 }
 
                 try
                 {
+                    Console.WriteLine("Writing to board");
                     serialPort.Write(
                         temp + ';' +
                         tempMin + ';' +
@@ -151,44 +147,47 @@ namespace HostServerDotNET
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine("Writing failed");
                     Console.WriteLine(e);
+                    Console.WriteLine("====================");
+                    Console.WriteLine();
                     try
                     {
                         serialPort.Close();
                     }
                     catch
                     {
-                        // ignored
+                        //
                     }
 
+                    serialPort = null;
                     continue;
                 }
 
-                Console.WriteLine(
-                    "temp: " + temp + '\n' +
-                    "temp_min: " + tempMin + '\n' +
-                    "temp_max: " + tempMax + '\n' +
-                    "pressure: " + pressure + '\n' +
-                    "humidity: " + humidity + '\n' +
-                    "time: " + time + '\n' +
-                    "===================="
-                );
-
-                // Console.WriteLine(serialPort.ReadLine());
-                // Console.WriteLine(serialPort.ReadLine());
-                // Console.WriteLine(serialPort.ReadLine());
-                // Console.WriteLine(serialPort.ReadLine());
-                // Console.WriteLine(serialPort.ReadLine());
-                // Console.WriteLine(serialPort.ReadLine());
-
                 try
                 {
-                    serialPort.Close();
+                    if (serialPort.ReadLine() == "RECEIVED")
+                    {
+                        Console.WriteLine("Completed");
+                        Console.WriteLine("====================");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No response received");
+                        Console.WriteLine("====================");
+                    }
                 }
-                catch (Exception e)
+                catch
                 {
-                    Console.WriteLine(e);
+                    // 
                 }
+
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
+                // Console.WriteLine(serialPort.ReadLine());
 
                 Thread.Sleep(500);
             }
@@ -206,7 +205,9 @@ namespace HostServerDotNET
             }
             catch (Exception e)
             {
+                Console.WriteLine("Reading failed: ");
                 Console.WriteLine(e);
+                Console.WriteLine("====================");
             }
 
             return streamContent;
