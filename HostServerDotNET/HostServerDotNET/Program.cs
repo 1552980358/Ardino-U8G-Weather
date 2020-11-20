@@ -8,9 +8,9 @@ namespace HostServerDotNET
 {
     internal static class Program
     {
-        private const string ApiKey = "de815d60d8077177e2f482ab4f5b4a7a";
+        // private const string ApiKey = "";
 
-        public static void Main()
+        public static void Main(string[] args)
         {
             // ReSharper disable once TooWideLocalVariableScope
             WebRequest webRequest;
@@ -21,6 +21,10 @@ namespace HostServerDotNET
             // ReSharper disable once TooWideLocalVariableScope
             SerialPort serialPort = null;
 
+            var port = args[0];
+            var baudRate = int.Parse(args[1]);
+            var apiKey = args[2];
+
             while (true)
             {
                 Console.WriteLine("Connecting to \"https://openweathermap.org/\"");
@@ -29,7 +33,7 @@ namespace HostServerDotNET
                     // 连接到 https://openweathermap.org/ 的API
                     webRequest = (HttpWebRequest)
                         WebRequest.Create(
-                            "http://api.openweathermap.org/data/2.5/weather?q=Mongkok,hk&units=metric&APPID=" + ApiKey);
+                            "http://api.openweathermap.org/data/2.5/weather?q=Mongkok,hk&units=metric&APPID=" + apiKey);
                 }
                 catch (Exception e)
                 {
@@ -65,7 +69,7 @@ namespace HostServerDotNET
                     try
                     {
                         Console.WriteLine("Connecting to board");
-                        serialPort = new SerialPort("COM4", 9600, Parity.None, 8, StopBits.One);
+                        serialPort = new SerialPort(port, baudRate, Parity.None, 8, StopBits.One);
                         serialPort.Open();
                     }
                     catch (Exception e)
