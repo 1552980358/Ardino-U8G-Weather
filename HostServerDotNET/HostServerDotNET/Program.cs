@@ -164,6 +164,17 @@ namespace HostServerDotNET
                 Console.WriteLine(e);
                 Console.WriteLine("====================");
             }
+            finally
+            {
+                try
+                {
+                    stream.Close();
+                }
+                catch
+                {
+                    //
+                }
+            }
 
             return streamContent;
         }
