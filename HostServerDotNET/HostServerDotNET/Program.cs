@@ -80,7 +80,7 @@ namespace HostServerDotNET
                         Console.WriteLine();
                         try
                         {
-                            serialPort.Close();
+                            serialPort?.Close();
                         }
                         catch
                         {
