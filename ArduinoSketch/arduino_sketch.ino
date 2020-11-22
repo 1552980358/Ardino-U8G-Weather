@@ -206,6 +206,13 @@ void draw_weather() {
 
 void lightLED() {
 
+    if (!data_changed_flag) {
+        return;
+    }
+
+    // Reset flag
+    data_changed_flag = 0;
+
     if (temp[0] <= '1') {
         if (current == BLUE) {
             return;
