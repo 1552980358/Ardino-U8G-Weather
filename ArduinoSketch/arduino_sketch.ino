@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include <U8glib/U8glib.h>
 
+/** Define Baud here, default as 9600 **/
+#define BAUD 9600
+
 /** Define your pin number **/
 #define BLUE 2      // Cold
 #define RED 3       // Hot
@@ -20,7 +23,7 @@ void data_changed();
 
 void setup(void) {
 
-    Serial.begin(9600);
+    Serial.begin(BAUD);
     // flip screen, if required
     // u8g.setRot180();
 
