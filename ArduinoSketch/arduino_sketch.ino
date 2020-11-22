@@ -16,6 +16,8 @@ void draw_weather();
 
 void lightLED();
 
+void data_changed();
+
 void setup(void) {
 
     Serial.begin(9600);
@@ -45,6 +47,8 @@ String temp_max = "";
 String pressure = "";
 String humidity = "";
 String time = "";
+
+auto data_changed_flag = 0;
 
 int current = 0;
 
@@ -89,6 +93,8 @@ int read_serial() {
         return 0;
     }
 
+    // data_changed_flag = 0;
+
     auto msg = Serial.readString();
 
     Serial.write("RECEIVED\n");
@@ -101,38 +107,75 @@ int read_serial() {
      * Date and time will be fetched with hard-coded 16 letters
      **/
 
-    temp = msg.substring(0, msg.indexOf(';'));
+
+    // temp = msg.substring(0, msg.indexOf(';'));
+    auto tmp = msg.substring(0, msg.indexOf(';'));
+    if (temp != tmp) {
+        temp = tmp;
+        data_changed();
+    }
     // msg.replace(temp + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
     // Serial.println(msg);
 
-    temp_min = msg.substring(0, msg.indexOf(';'));
+
+    // temp_min = msg.substring(0, msg.indexOf(';'));
+    tmp = msg.substring(0, msg.indexOf(';'));
+    if (temp_min != tmp) {
+        temp_min = tmp;
+        data_changed();
+    }
     // msg.replace(temp_min + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
     // Serial.println(msg);
 
-    temp_max = msg.substring(0, msg.indexOf(';'));
+    // temp_max = msg.substring(0, msg.indexOf(';'));
+    tmp = msg.substring(0, msg.indexOf(';'));
+    if (temp_max != tmp) {
+        temp_max = tmp;
+        data_changed();
+    }
     // msg.replace(temp_max + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
     // Serial.println(msg);
 
-    pressure = msg.substring(0, msg.indexOf(';'));
+    // pressure = msg.substring(0, msg.indexOf(';'));
+    tmp = msg.substring(0, msg.indexOf(';'));
+    if (pressure != tmp) {
+        pressure = tmp;
+        data_changed();
+    }
     // msg.replace(pressure + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
     // Serial.println(msg);
 
-    humidity = msg.substring(0, msg.indexOf(';'));
+    // humidity = msg.substring(0, msg.indexOf(';'));
+    tmp = msg.substring(0, msg.indexOf(';'));
+    if (pressure != tmp) {
+        humidity = tmp;
+        data_changed();
+    }
     // msg.replace(humidity + ';', "");
     msg = msg.substring(msg.indexOf(';') + 1);
     // Serial.println(msg);
 
     // Date is fixed, in yyyy-MM-dd HH:mm
     // which is 16 letters
-    time = msg.substring(0, 16);
+    // time = msg.substring(0, 16);
+    tmp = msg.substring(0, 16);
+    if (time != tmp) {
+        time = tmp;
+        data_changed();
+    }
+
     return 1;
 }
 
 void draw_weather() {
+    if (!data_changed_flag) {
+        return;
+    }
+
     u8g.firstPage();
     String tmp;
     int height = 0;
@@ -209,4 +252,10 @@ void lightLED() {
         digitalWrite(current, HIGH);
     }
 
+}
+
+void data_changed() {
+    if (!data_changed_flag) {
+        data_changed_flag = 1;
+    }
 }
