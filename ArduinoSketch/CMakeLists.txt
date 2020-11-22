@@ -28,8 +28,8 @@ set(${PROJECT_NAME}_SKETCH arduino_sketch.ino)
 # For nested library sources replace ${LIB_NAME} with library name for each library
 # set(_RECURSE true)
 
-include_directories(C:\\Arduino\\arduino-1.8.13\\libraries\\U8glib)
-link_directories(C:\\Arduino\\arduino-1.8.13\\libraries\\U8glib)
+include_directories(${ARDUINO_SDK_PATH}\\libraries\\U8glib)
+link_directories(${ARDUINO_SDK_PATH}\\libraries\\U8glib)
 set(U8glib_RECURSE True)
 
 #### Additional settings for programmer. From programmers.txt
