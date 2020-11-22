@@ -187,17 +187,17 @@ void draw_weather() {
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
         u8g.setFont(u8g_font_7x13);
-        height += u8g.getFontAscent() * (1 + (1 / 2));
+        height += u8g.getFontAscent() * 1.5; //(1 + (1 / 2)); NOLINT(cppcoreguidelines-narrowing-conversions)
 
         tmp = temp_min + "\'C / " + temp_max + "\'C";
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
-        height += u8g.getFontAscent() * (1 + (1 / 2));
+        height += u8g.getFontAscent() * 1.5; //(1 + (1 / 2)); NOLINT(cppcoreguidelines-narrowing-conversions)
 
         tmp = pressure + "hPa | " + humidity + '%';
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
-        height += u8g.getFontAscent() * (1 + (1 / 2));
+        height += u8g.getFontAscent() * 1.5; //(1 + (1 / 2)); NOLINT(cppcoreguidelines-narrowing-conversions)
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(time.c_str())) / 2, height, time.c_str());
 
         height = 0;
