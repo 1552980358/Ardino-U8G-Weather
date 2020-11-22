@@ -149,12 +149,12 @@ void draw_weather() {
         tmp = temp_min + "\'C / " + temp_max + "\'C";
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
-        height += u8g.getFontAscent() * 1.5;
+        height += u8g.getFontAscent() * (1 + (1 / 2));
 
         tmp = pressure + "hPa | " + humidity + '%';
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(tmp.c_str())) / 2, height, tmp.c_str());
 
-        height += u8g.getFontAscent() * 1.5;
+        height += u8g.getFontAscent() * (1 + (1 / 2));
         u8g.drawStr((u8g.getWidth() - u8g.getStrPixelWidth(time.c_str())) / 2, height, time.c_str());
 
         height = 0;
