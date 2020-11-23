@@ -21,9 +21,10 @@ namespace HostServerDotNET
             // ReSharper disable once TooWideLocalVariableScope
             SerialPort serialPort = null;
 
-            var port = args[0];
-            var baudRate = int.Parse(args[1]);
-            var apiKey = args[2];
+            var location = args[0];
+            var port = args[1];
+            var baudRate = int.Parse(args[2]);
+            var apiKey = args[3];
 
             while (true)
             {
@@ -33,7 +34,8 @@ namespace HostServerDotNET
                     // 连接到 https://openweathermap.org/ 的API
                     webRequest = (HttpWebRequest)
                         WebRequest.Create(
-                            "http://api.openweathermap.org/data/2.5/weather?q=Mongkok,hk&units=metric&APPID=" + apiKey);
+                            "http://api.openweathermap.org/data/2.5/weather?" + location + "&units=metric&APPID=" +
+                            apiKey);
                 }
                 catch (Exception e)
                 {
