@@ -37,7 +37,8 @@
  - Use pre-compiled .exe file (Recommanded), can be found at assets of [Releases](https://github.com/1552980358/Ardino-U8G-Weather/releases), named starts with `HostServerDotNET`
  - Compile project with `Jetbrains Rider` (Recommanded & tested) or `Visual Studio`
  - ApiKey can be gotten from [https://openweathermap.org/](https://openweathermap.org/) for free
- - Use Command: `<PATH OF YOUR EXE FILE> "<YOUR BOARD COM NUMBER>" "<YOUR BAUDRATE, RECOMMANDED AS 9600>" "<YOUR APIKEY>"`
+ - Use Command: `<PATH OF YOUR EXE FILE> "<[q={city name},{state code}] or [id={City ID}]>" "<YOUR BOARD COM NUMBER>" "<YOUR BAUDRATE, RECOMMANDED AS 9600>" "<YOUR APIKEY>"`
+ - See [https://openweathermap.org/current](https://openweathermap.org/current) for detail API usage
 
 ### Photo
 ![](IMG_1.jpg)
