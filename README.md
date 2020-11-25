@@ -42,6 +42,9 @@
 
 ### Photo
 ![](IMG_1.jpg)
+
+### PCB
+![](PNG_PCB_V1.0.png)
  
  ### Credit
   - U8glib
