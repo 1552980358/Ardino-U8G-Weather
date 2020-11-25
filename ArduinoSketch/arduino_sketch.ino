@@ -68,7 +68,7 @@ void loop(void) {
 
     draw_weather();
     lightLED();
-    delay(100);
+    delay(200);
 }
 
 void draw_launch() {
