@@ -185,18 +185,17 @@ namespace HostServerDotNET
         {
             string tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp\":", StringComparison.Ordinal) + 7);
             var temp = tmp.Substring(0, tmp.IndexOf(','));
-
             if (temp.Length > 2)
             {
                 temp = temp[3] >= '5'
                     ? (
                         temp[1] == '9'
-                            ? (temp[0] + 1).ToString() + '0'
+                            ? (char) (temp[0] + 1) + "0"
                             : temp[0].ToString() + (char) (temp[1] + 1)
                     )
                     : temp.Substring(0, 2);
             }
-
+            
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_min\"", StringComparison.Ordinal) + 11);
             var tempMin = tmp.Substring(0, tmp.IndexOf(','));
             if (tempMin.Length > 2)
@@ -204,10 +203,11 @@ namespace HostServerDotNET
                 tempMin = tempMin[3] >= '5'
                     ? (
                         tempMin[1] == '9'
-                            ? (tempMin[0] + 1).ToString() + '0'
-                            : tempMin[0].ToString() + (char) (temp[1] + 1)
+                            ? (char) (tempMin[0] + 1) + "0"
+                            : tempMin[0].ToString() + (char) (tempMin[1] + 1)
                     )
                     : tempMin.Substring(0, 2);
+                    
             }
 
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_max\"", StringComparison.Ordinal) + 11);
@@ -217,12 +217,13 @@ namespace HostServerDotNET
                 tempMax = tempMax[3] >= '5'
                     ? (
                         tempMax[1] == '9'
-                            ? (tempMax[0] + 1).ToString() + '0'
-                            : tempMax[0].ToString() + (char) (temp[1] + 1)
+                            ? (char) (tempMax[0] + 1) + "0"
+                            : tempMax[0].ToString() + (char) (tempMax[1] + 1)
                     )
                     : tempMax.Substring(0, 2);
+                    
             }
-
+            
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"pressure\"", StringComparison.Ordinal) + 11);
             var pressure = tmp.Substring(0, tmp.IndexOf(','));
 
