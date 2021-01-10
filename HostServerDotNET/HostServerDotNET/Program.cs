@@ -96,7 +96,7 @@ namespace HostServerDotNET
 
                 try
                 {
-                    Console.WriteLine("Writing to board");
+                    Console.WriteLine("Writing to board: " + msg);
                     serialPort.Write(msg);
                 }
                 catch (Exception e)
@@ -195,6 +195,10 @@ namespace HostServerDotNET
                     )
                     : temp.Substring(0, 2);
             }
+            if (temp.EndsWith("."))
+            {
+                temp = temp.Substring(0, temp.Length - 1);
+            }
             
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_min\"", StringComparison.Ordinal) + 11);
             var tempMin = tmp.Substring(0, tmp.IndexOf(','));
@@ -207,7 +211,10 @@ namespace HostServerDotNET
                             : tempMin[0].ToString() + (char) (tempMin[1] + 1)
                     )
                     : tempMin.Substring(0, 2);
-                    
+            }
+            if (tempMin.EndsWith("."))
+            {
+                tempMin = tempMin.Substring(0, tempMin.Length - 1);
             }
 
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"temp_max\"", StringComparison.Ordinal) + 11);
@@ -221,7 +228,10 @@ namespace HostServerDotNET
                             : tempMax[0].ToString() + (char) (tempMax[1] + 1)
                     )
                     : tempMax.Substring(0, 2);
-                    
+            }
+            if (tempMax.EndsWith("."))
+            {
+                tempMax = tempMax.Substring(0, tempMax.Length - 1);
             }
             
             tmp = jsonMsg.Substring(jsonMsg.IndexOf("\"pressure\"", StringComparison.Ordinal) + 11);
